@@ -2,10 +2,10 @@ import { useState } from "react";
 import styled from "styled-components";
 
 import { LoginButton } from "../atoms/LoginButton";
-import { UseLogin } from "../../hooks/UseLogin";
+import { useLogin } from "../../hooks/useLogin";
 
 export const LoginPart = () => {
-  const { login } = UseLogin();
+  const { login } = useLogin();
   const [user, setUser] = useState({
     id: "",
     pass: ""
