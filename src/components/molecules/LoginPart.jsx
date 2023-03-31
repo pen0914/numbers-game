@@ -2,7 +2,7 @@ import { useState } from "react";
 import styled from "styled-components";
 
 import { LoginButton } from "../atoms/LoginButton";
-import { UseLogin } from "../hooks/UseLogin";
+import { UseLogin } from "../../hooks/UseLogin";
 
 export const LoginPart = () => {
   const { login } = UseLogin();

@@ -2,11 +2,14 @@ import "./styles.css";
 import { BrowserRouter } from "react-router-dom";
 
 import { MainRouter } from "./router/MainRouter";
+import { UserProvider } from "./providers/UserProvider";
 
 export default function App() {
   return (
-    <BrowserRouter>
-      <MainRouter />
-    </BrowserRouter>
+    <UserProvider>
+      <BrowserRouter>
+        <MainRouter />
+      </BrowserRouter>
+    </UserProvider>
   );
 }
