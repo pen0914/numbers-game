@@ -1,12 +1,18 @@
-import { useCallback } from "react";
+import { useCallback, useContext } from "react";
+import { UserContext } from "../providers/UserProvider";
 
 export const UseLogin = () => {
+  const { setUserData } = useContext(UserContext);
   const data = { id: "1", pass: "1" };
   const login = useCallback((user) => {
-    const selectData = data.find((d) => {
-      d === user;
-    });
-    setLoginUser(selectData);
+    if (
+      data.id === user.id &&
+      data.pass === user.pass
+    ) {
+      const selectData = data.id;
+      setUserData(selectData);
+      console.log(selectData);
+    }
   }, []);
 
   return { login };
