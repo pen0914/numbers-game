@@ -47,7 +47,9 @@ export const LoginPart = (props) => {
             onChange={onChangeUserPass}
           />
         </SInputDiv>
-        <SLoginButton onClick={onClickLogin} />
+        <SLoginButton onClick={onClickLogin}>
+          ログイン
+        </SLoginButton>
       </div>
     </SDiv>
   );

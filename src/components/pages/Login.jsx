@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { PlayButton } from "../atoms/PlayButton";
 import { AfterLoginPart } from "../molecules/AfterLoginPart";
 import { LoginPart } from "../molecules/LoginPart";
-import { ColorChangeButton } from "../atoms/ColorChangeButton";
+import { LoginButton } from "../atoms/LoginButton";
 
 export const Login = () => {
   const [login, setLogin] = useState(false);
@@ -69,9 +69,7 @@ const SImage = styled.div`
   margin: 50px 0;
 `;
 
-const SColorChangeButton = styled(
-  ColorChangeButton
-)`
+const SColorChangeButton = styled(LoginButton)`
   border: solid 1px black;
   padding: 0 5px;
   margin: 0 3px;
