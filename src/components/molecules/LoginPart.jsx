@@ -4,7 +4,8 @@ import styled from "styled-components";
 import { LoginButton } from "../atoms/LoginButton";
 import { useLogin } from "../../hooks/useLogin";
 
-export const LoginPart = () => {
+export const LoginPart = (props) => {
+  const { setLogin, className } = props;
   const { login } = useLogin();
   const [user, setUser] = useState({
     id: "",
@@ -23,24 +24,24 @@ export const LoginPart = () => {
     }));
 
   const onClickLogin = () => {
-    login(user);
+    login({ user, setLogin });
   };
 
   return (
-    <SDiv>
-      <div>ログイン</div>
+    <SDiv className={className}>
+      <SP>ログイン</SP>
       <div>
         <SInputDiv>
-          <p>ユーザー名</p>
-          <input
-            placeholder="ユーザー名"
+          ユーザーID
+          <SInput
+            placeholder="ユーザーID"
             value={user.id}
             onChange={onChangeUserId}
           />
         </SInputDiv>
         <SInputDiv>
-          <p>パスワード</p>
-          <input
+          パスワード
+          <SInput
             placeholder="パスワード"
             value={user.pass}
             onChange={onChangeUserPass}
@@ -54,9 +55,22 @@ export const LoginPart = () => {
 
 const SDiv = styled.div`
   border: solid 1px black;
+  border-radius: 10px;
+`;
+
+const SP = styled.p`
+  font-size: 20px;
 `;
 
 const SInputDiv = styled.div`
   display: flex;
   justify-content: center;
+  text-align: center;
+  line-height: 30px;
+  height: 30px;
+  margin: 10px 0;
+`;
+
+const SInput = styled.input`
+  margin-left: 20px;
 `;
