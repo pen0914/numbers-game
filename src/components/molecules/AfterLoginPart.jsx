@@ -9,11 +9,18 @@ export const AfterLoginPart = (props) => {
   return (
     <SDiv className={className}>
       <div>こんにちは{userData}さん!!</div>
-      <PlayButton>PLAY!!</PlayButton>
+      <SPlayButton>PLAY!!</SPlayButton>
     </SDiv>
   );
 };
 
 const SDiv = styled.div`
   border: solid 1px black;
+`;
+
+const SPlayButton = styled(PlayButton)`
+  background-color: #d4dcd6;
+  color: black;
+  border: solid 1px black;
+  border-radius: 3px;
 `;

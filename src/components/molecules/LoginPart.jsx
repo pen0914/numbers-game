@@ -84,4 +84,8 @@ const SInput = styled.input`
 
 const SLoginButton = styled(LoginButton)`
   margin: 10px 0 20px 0;
+  background-color: #d4dcd6;
+  color: black;
+  border: solid 1px black;
+  border-radius: 3px;
 `;
