@@ -47,7 +47,7 @@ export const LoginPart = (props) => {
             onChange={onChangeUserPass}
           />
         </SInputDiv>
-        <LoginButton onClick={onClickLogin} />
+        <SLoginButton onClick={onClickLogin} />
       </div>
     </SDiv>
   );
@@ -69,8 +69,19 @@ const SInputDiv = styled.div`
   line-height: 30px;
   height: 30px;
   margin: 10px 0;
+  @media (max-width: 600px) {
+    display: block;
+    height: 60px;
+  }
 `;
 
 const SInput = styled.input`
   margin-left: 20px;
+  @media (max-width: 600px) {
+    margin: 0;
+  }
+`;
+
+const SLoginButton = styled(LoginButton)`
+  margin: 10px 0 20px 0;
 `;
