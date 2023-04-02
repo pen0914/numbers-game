@@ -17,6 +17,7 @@ export const AfterLoginPart = (props) => {
 
 const SDiv = styled.div`
   border: solid 1px black;
+  border-radius: 10px;
 `;
 
 const SPlayButton = styled(PlayButton)`

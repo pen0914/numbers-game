@@ -80,6 +80,7 @@ const SColorChangeButton = styled(LoginButton)`
 
 const SAfterLoginPart = styled(AfterLoginPart)`
   width: 60%;
+  margin: 0 auto;
 `;
 
 const SLoginPart = styled(LoginPart)`

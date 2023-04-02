@@ -23,15 +23,16 @@ const SInputDiv = styled.div`
   line-height: 30px;
   height: 30px;
   margin: 10px 0;
-  @media (max-width: 600px) {
-    display: block;
+  @media (max-width: 500px) {
+    flex-direction: column;
     height: 60px;
   }
 `;
 
 const SInput = styled.input`
   margin-left: 20px;
-  @media (max-width: 600px) {
-    margin: 0;
+  @media (max-width: 500px) {
+    margin: 0 auto;
+    width: 70%;
   }
 `;

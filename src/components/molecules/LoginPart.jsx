@@ -22,8 +22,10 @@ export const LoginPart = (props) => {
 
   return (
     <SDiv className={className}>
-      <SP>ログイン</SP>
-      <div>
+      <SText>
+        <p>ログイン</p>
+      </SText>
+      <SinputArea>
         <InputForm
           onChange={onChangeId}
           value={id}
@@ -39,22 +41,28 @@ export const LoginPart = (props) => {
         <SLoginButton onClick={onClickLogin}>
           ログイン
         </SLoginButton>
-      </div>
+      </SinputArea>
     </SDiv>
   );
 };
 
 const SDiv = styled.div`
+  display: flex;
+  flex-direction: column;
   border: solid 1px black;
   border-radius: 10px;
 `;
 
-const SP = styled.p`
-  font-size: 20px;
+const SText = styled.div`
+  flex-basis: 20%;
+`;
+
+const SinputArea = styled.div`
+  flex-basis: 80%;
 `;
 
 const SLoginButton = styled(LoginButton)`
-  margin: 10px 0 20px 0;
+  /* margin: 10px 0 20px 0; */
   background-color: #d4dcd6;
   color: black;
   border: solid 1px black;
