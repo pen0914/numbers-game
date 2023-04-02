@@ -6,9 +6,9 @@ export const useLogin = () => {
   const data = { id: "1", pass: "1" };
   const login = useCallback(
     (props) => {
-      const { user, setLogin } = props;
-      if (data.id === user.id) {
-        if (data.pass === user.pass) {
+      const { id, pass, setLogin } = props;
+      if (data.id === id) {
+        if (data.pass === pass) {
           const selectData = data.id;
           setUserData(selectData);
           setLogin(true);

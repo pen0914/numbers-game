@@ -6,8 +6,10 @@ import { PlayButton } from "../atoms/PlayButton";
 import { AfterLoginPart } from "../molecules/AfterLoginPart";
 import { LoginPart } from "../molecules/LoginPart";
 import { LoginButton } from "../atoms/LoginButton";
+import { useBgColor } from "../../hooks/useBgColor";
 
 export const Login = () => {
+  const { bgColor, setBgColor } = useBgColor();
   const [login, setLogin] = useState(false);
   const array = [
     "97a791",
@@ -18,14 +20,12 @@ export const Login = () => {
     "867ba9"
   ];
 
-  const [bgcolor, setBgcolor] = useState("white");
   const onClickColorChange = (index) => {
-    setBgcolor(array[index]);
+    setBgColor(array[index]);
   };
 
-  console.log(bgcolor);
   return (
-    <SDiv bgcolor={bgcolor}>
+    <SDiv bgColor={bgColor}>
       <STitle>Hit&Blow</STitle>
       <SImage>
         {array.map((a, index) => {
@@ -58,7 +58,7 @@ const SDiv = styled.div`
   margin: 0;
   padding: 0;
   height: 100vh;
-  background-color: #${(props) => props.bgcolor};
+  background-color: #${(props) => props.bgColor};
 `;
 
 const STitle = styled.p`

@@ -4,13 +4,16 @@ import { BrowserRouter } from "react-router-dom";
 
 import { MainRouter } from "./router/MainRouter";
 import { UserProvider } from "./providers/UserProvider";
+import { BgColorProvider } from "./providers/BgColorProvider";
 
 export default function App() {
   return (
-    <UserProvider>
-      <BrowserRouter>
-        <MainRouter />
-      </BrowserRouter>
-    </UserProvider>
+    <BgColorProvider>
+      <UserProvider>
+        <BrowserRouter>
+          <MainRouter />
+        </BrowserRouter>
+      </UserProvider>
+    </BgColorProvider>
   );
 }
