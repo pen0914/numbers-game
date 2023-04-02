@@ -1,3 +1,4 @@
+import React from "react";
 export const LoginButton = (props) => {
   const { onClick, className, children } = props;
   return (
