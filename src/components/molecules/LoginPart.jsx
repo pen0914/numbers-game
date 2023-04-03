@@ -27,12 +27,14 @@ export const LoginPart = (props) => {
       </SText>
       <SinputArea>
         <InputForm
+          type="text"
           onChange={onChangeId}
           value={id}
         >
           ユーザーID
         </InputForm>
         <InputForm
+          type="password"
           onChange={onChangePass}
           value={pass}
         >
@@ -62,7 +64,7 @@ const SinputArea = styled.div`
 `;
 
 const SLoginButton = styled(LoginButton)`
-  /* margin: 10px 0 20px 0; */
+  margin: 10px 0 20px 0;
   background-color: #d4dcd6;
   color: black;
   border: solid 1px black;

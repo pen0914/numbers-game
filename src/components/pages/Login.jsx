@@ -10,7 +10,7 @@ import { useBgColor } from "../../hooks/useBgColor";
 
 export const Login = () => {
   const { bgColor, setBgColor } = useBgColor();
-  const [login, setLogin] = useState(false);
+  const [login, setLogin] = useState();
   const array = [
     "97a791",
     "e8d3d1",
@@ -47,8 +47,9 @@ export const Login = () => {
       ) : (
         <SLoginPart setLogin={setLogin} />
       )}
-
-      <SPlayButton>ゲストでPLAY!!</SPlayButton>
+      {login ?? (
+        <SPlayButton>ゲストでPLAY!!</SPlayButton>
+      )}
     </SDiv>
   );
 };

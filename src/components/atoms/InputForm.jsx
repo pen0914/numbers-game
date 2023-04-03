@@ -2,12 +2,18 @@ import React from "react";
 import styled from "styled-components";
 
 export const InputForm = (props) => {
-  const { value, onChange, children } = props;
+  const {
+    type,
+    value,
+    onChange,
+    children
+  } = props;
 
   return (
     <SInputDiv>
       {children}
       <SInput
+        type={type}
         placeholder={children}
         value={value}
         onChange={onChange}
