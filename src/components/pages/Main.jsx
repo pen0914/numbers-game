@@ -4,6 +4,10 @@ import { useBgColor } from "../../hooks/useBgColor";
 
 export const Main = () => {
   const { bgColor } = useBgColor();
+
+  const num = Math.floor(Math.random() * 11);
+  console.log(num);
+
   return (
     <SDiv bgColor={bgColor}>
       <SUpper>
